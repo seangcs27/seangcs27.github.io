@@ -66,7 +66,7 @@
   // pointer lets more through, since that is where the field is being tuned.
   function measureQuiet() {
     quiet = [];
-    document.querySelectorAll('h1, .lede, .name, .what, footer p').forEach(el => {
+    document.querySelectorAll('h1, .lede, .name, .what').forEach(el => {
       const r = el.getBoundingClientRect();
       if (r.bottom < 0 || r.top > height) return;
       quiet.push({ el, left: r.left - 8, right: r.right + 8, top: r.top, bottom: r.bottom });
